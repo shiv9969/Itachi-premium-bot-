@@ -302,23 +302,21 @@ async def start(client, message):
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         try:
             if await db.has_premium_access(message.from_user.id):
-                msg = await client.send_cached_media(
+                await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=file_id,
                     protect_content=True if pre == 'filep' else False,
                     reply_markup=InlineKeyboardMarkup(
-                      [
+                        [
                          [
                           InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
-                          ],[
-                          InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
-                          ]
+              
+                       ],[
+                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    ]
                         ]
                     )
                 )
-                dev = await client.send_message(chat_id = message.from_user.id, text=f"This File Is Automaticlly Delete After 10 Day\n\n(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ)</b>")
-                await asyncio.sleep(864000)
-                await msg.delete()
                 return
             elif IS_VERIFY and not await check_verification(client, message.from_user.id):
                 btn = [[
@@ -359,9 +357,6 @@ async def start(client, message):
                 except:
                     return
             await msg.edit_caption(f_caption)
-            dev = await client.send_message(chat_id = message.from_user.id, text=f"<b>This File Is Automaticlly Delete After 10 Day\n\n(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ)</b>")
-            await asyncio.sleep(864000)
-            await msg.delete()
             return
         except:
             pass
@@ -410,24 +405,22 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
-    msg = await client.send_cached_media(
+    await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
-          [
             [
-             InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"not_premium#{file_id}")  
-             ],[
-             InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
-               ]
+             [
+             InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"not_premium#{file_id}")
+              
+           ],[
+                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    ]
             ]
         )
-     )
-    dev = await client.send_message(chat_id = message.from_user.id, text=f"<b>This File Is Automaticlly Delete After 10 Day\n\n(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ)</b>")
-    await asyncio.sleep(864000)
-    await msg.delete()
+    )
     
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
