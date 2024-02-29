@@ -418,21 +418,19 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
+          [
             [
-             [
-             InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"not_premium#{file_id}")
-              
-           ],[
-                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
-                    ]
+             InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"not_premium#{file_id}")  
+             ],[
+             InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+               ]
             ]
         )
-       )
+     )
     dev = await client.send_message(chat_id = message.from_user.id, text=f"<b>❗️ <u>ɪᴍᴘᴏʀᴛᴀɴᴛ</u> ❗️</b>\n\n<b>ᴛʜɪꜱ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ</b> <b><u>10 ᴍɪɴᴜᴛᴇꜱ</u> </b><b>(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ).</b>\n\n<b><i>📌 ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜɪꜱ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ᴛᴏ ꜱᴏᴍᴇᴡʜᴇʀᴇ ᴇʟꜱᴇ ᴀɴᴅ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴛʜᴇʀᴇ.</i></b>")
     await asyncio.sleep(600)
     await msg.delete()
     await dev.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
-    return 
     
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
