@@ -50,16 +50,16 @@ premium = environ.get('PREMIUM_LOGS', '-1002114337101')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 
 IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'aslink.in')
-IMPORT_JK_API = environ.get('IMPORT_JK_API', '370f25edda9c4e28b2a065481517f400e11ebbe0')
+IMPORT_JK_API = environ.get('IMPORT_JK_API', '3cca6e419d8a95510a839b360a94c81d1e9117e2')
 SHORT_MODE = is_enabled((environ.get("SHORT_MODE","False")), False)
 
 # Others
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Niko_Roben")
 VERIFY2_URL = environ.get('VERIFY2_URL', "aslink.in")
-VERIFY2_API = environ.get('VERIFY2_API', "370f25edda9c4e28b2a065481517f400e11ebbe0")
+VERIFY2_API = environ.get('VERIFY2_API', "3cca6e419d8a95510a839b360a94c81d1e9117e2")
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'aslink.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '370f25edda9c4e28b2a065481517f400e11ebbe0')
+SHORTLINK_API = environ.get('SHORTLINK_API', '3cca6e419d8a95510a839b360a94c81d1e9117e2')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001966591245').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "7")
