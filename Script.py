@@ -1,25 +1,25 @@
 class script(object):
-    START_TXT = """<b>
-Mʏ Nᴀᴍᴇ Is #Minato, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs, Jᴜsᴛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ Aɴᴅ Eɴᴊᴏʏ.</b>"""
+    START_TXT = """<b><blockquote>
+Mʏ Nᴀᴍᴇ Is #Minato, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs, Jᴜsᴛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ Aɴᴅ Eɴᴊᴏʏ.</blockquote></b>"""
 
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
-    ABOUT_TXT = """<b>✯ Mʏ Nᴀᴍᴇ: {}
+    ABOUT_TXT = """<b><blockquote>✯ Mʏ Nᴀᴍᴇ: {}
 ✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/Master_Jiraya_Bot'>Master Jiraya</a>
 ✯ Lɪʙʀᴀʀʏ: Pʏʀᴏɢʀᴀᴍ
 ✯ Lᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
 ✯ DᴀᴛᴀBᴀsᴇ: MᴏɴɢᴏDB
 ✯ Bᴏᴛ Sᴇʀᴠᴇʀ: Vs Code Live Server
-✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: #Offline</b>"""
+✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: #Offline</blockquote></b>"""
 
-    SOURCE_TXT = """<b>ɴᴏᴛᴇ:
+    SOURCE_TXT = """<b><blockquote>ɴᴏᴛᴇ:
 - ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
-- Repo link - <a href="https://graph.org/The-Happy-Hour-12-28">Click Here</a></b>"""
+- Repo link - <a href="https://graph.org/The-Happy-Hour-12-28">Click Here</a></blockquote></b>"""
 
 
     KUSHAL_TXT = """ 
-<b>🔥 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs 🔥
+<b><blockquote>🔥 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs 🔥
 
 ➻ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ
 ➻ ᴅɪʀᴇᴄᴛ ғɪʟᴇs
@@ -36,7 +36,7 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 ➻ ऐडमिन कि तरफ से पूरा सपोर्ट
 ➻ Req Complete in 1D
 
-👇 ᴄʜᴀᴄᴋ ᴀʟʟ ᴘʟᴀɴꜱ 👇
+👇 ᴄʜᴀᴄᴋ ᴀʟʟ ᴘʟᴀɴꜱ 👇</blockquote>
 </b>"""
 
     
@@ -117,11 +117,11 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /delallg - <code>Tᴏ ᴅᴇʟᴇᴛᴇ ᴀʟʟ Gғɪʟᴛᴇʀs ғʀᴏᴍ ᴛʜᴇ ʙᴏᴛ's ᴅᴀᴛᴀʙᴀsᴇ.</code>
 • /deletefiles - <code>Tᴏ ᴅᴇʟᴇᴛᴇ CᴀᴍRɪᴘ ᴀɴᴅ PʀᴇDVD Fɪʟᴇs ғʀᴏᴍ ᴛʜᴇ ʙᴏᴛ's ᴅᴀᴛᴀʙᴀsᴇ.</code>"""
 
-    STATUS_TXT = """<b>★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
+    STATUS_TXT = """<b><blockquote>★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
 ★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
 ★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code>
-★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b>"""
+★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></blockquote></b>"""
 
     LOG_TEXT_G = """#NewGroup
 Gʀᴏᴜᴘ = {}(<code>{}</code>)
@@ -140,7 +140,7 @@ Nᴀᴍᴇ - {}"""
 
     CUDNT_FND = """Select True Name...!!!"""
 
-    I_CUDNT = """<b>Sᴇᴀʀᴄʜ Mᴏᴠɪᴇ Wɪᴛʜ Cᴏʀʀᴇᴄᴛ Sᴘᴇʟʟɪɴɢ :
+    I_CUDNT = """<b><blockquote>Sᴇᴀʀᴄʜ Mᴏᴠɪᴇ Wɪᴛʜ Cᴏʀʀᴇᴄᴛ Sᴘᴇʟʟɪɴɢ :
 
 › ᴀᴠᴀᴛᴀʀ ✅
 › ᴀᴠᴀᴛᴀʀ 2009 ✅
@@ -155,7 +155,7 @@ Sᴇᴀʀᴄʜ Wᴇʙ Sᴇʀɪᴇs Iɴ ᴛʜɪs Fᴏʀᴍᴀᴛᴇ :
 › ᴠɪᴋɪɴɢs sᴇᴀsᴏɴ 1 ❌
 › ᴠɪᴋɪɴɢs ᴡᴇʙ sᴇʀɪᴇs ❌
 
-🔹 ᴅᴏɴ'ᴛ sᴇɴᴅ ᴀɴʏ ᴋɪɴᴅ ᴏғ ᴘʜᴏᴛᴏ, ᴠɪᴅᴇᴏ ᴅᴏᴄᴜᴍᴇɴᴛs, ᴜʀʟ ᴇᴛᴄ...</b>"""
+🔹 ᴅᴏɴ'ᴛ sᴇɴᴅ ᴀɴʏ ᴋɪɴᴅ ᴏғ ᴘʜᴏᴛᴏ, ᴠɪᴅᴇᴏ ᴅᴏᴄᴜᴍᴇɴᴛs, ᴜʀʟ ᴇᴛᴄ...</blockquote></b>"""
 
     I_CUD_NT = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ.
 ᴘʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ ꜱᴘᴇʟʟɪɴɢ..."""
@@ -211,17 +211,17 @@ Sᴇᴀʀᴄʜ Wᴇʙ Sᴇʀɪᴇs Iɴ ᴛʜɪs Fᴏʀᴍᴀᴛᴇ :
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
     CAPTION = """
-<b><a href="https://t.me/ThappyHour">{file_name}</a></b>"""
+<b><blockquote><a href="https://t.me/ThappyHour">{file_name}</a></blockquote></b>"""
 
     IMDB_TEMPLATE_TXT = """
-<b>
+<b><blockquote>
 🍿 Title: <a href={url}>{title}</a>
 🎃 Genres: {genres}
 📆 Year: <a href={url}/releaseinfo>{year}</a>
 ⭐ Rating: <a href={url}/ratings>{rating}</a> / 10
 🔉 Audio: #Hindi #English
 
-📕 Story: </b> """
+📕 Story: </blockquote></b> """
     
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""
@@ -245,7 +245,7 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 • /plink - <code>Jᴜsᴛ ʟɪᴋᴇ /link, ʙᴜᴛ ᴛʜᴇ ғɪʟᴇ ᴡɪʟʟ ʙᴇ sᴇɴᴅ ᴡɪᴛʜ ғᴏʀᴡᴀʀᴅ ʀᴇsᴛʀɪᴄᴛɪᴏɴ.</code>"""
 
     CHECK_TXT = """
-<b><a href='https://graph.org/The-Happy-Hour-12-22-2'>💥 ᴘʀᴇᴍɪᴜᴍ ᴘʀɪᴄᴇ 💥
+<b><blockquote><a href='https://graph.org/The-Happy-Hour-12-22-2'>💥 ᴘʀᴇᴍɪᴜᴍ ᴘʀɪᴄᴇ 💥
 
 1 Wᴇᴇᴋ = [50 + 0] Rs
 1 Mᴏɴᴛʜ = [50 + 10] Rs
@@ -254,10 +254,10 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 6 Mᴏɴᴛʜ = [50 + 100] Rs
 1 Yᴇᴀʀ = [50 + 150] Rs
 
-⚡ᴄʜᴀᴄᴋ ᴘʀᴇᴍɪᴜᴍ ꜰᴜᴛᴜʀᴇꜱ⚡</a></b>"""
+⚡ᴄʜᴀᴄᴋ ᴘʀᴇᴍɪᴜᴍ ꜰᴜᴛᴜʀᴇꜱ⚡</a></blockquote></b>"""
 
     PLAN1_TXT = """
-<b>☝️ ꜱᴄᴀɴ ᴛʜɪꜱ QR ᴀɴᴅ ᴘᴀʏ 👆
+<b><blockquote>☝️ ꜱᴄᴀɴ ᴛʜɪꜱ QR ᴀɴᴅ ᴘᴀʏ 👆
 
 ➻ पेमैंट के बाद आपको screenshot सैंड करना होगा...।
 ➻ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ
@@ -268,10 +268,10 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 
 ━━━━━━━━━━━━━━━━━━━
 
-ɴᴏᴛᴇ : ꜱᴇɴᴅ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ᴀꜰᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ [ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ]</b>"""
+ɴᴏᴛᴇ : ꜱᴇɴᴅ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ᴀꜰᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ [ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ]</b></blockquote>"""
 
     PLAN2_TXT = """
-<b>☝️ ꜱᴄᴀɴ ᴛʜɪꜱ QR ᴀɴᴅ ᴘᴀʏ 👆
+<b><blockquote>☝️ ꜱᴄᴀɴ ᴛʜɪꜱ QR ᴀɴᴅ ᴘᴀʏ 👆
 
 ➻ पेमैंट के बाद आपको बस screenshot सैंड करना होगा...।
 ➻ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ
@@ -285,10 +285,10 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 ━━━━━━━━━━━━━━━━━━━
 
 ɴᴏᴛᴇ : ꜱᴇɴᴅ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ᴀꜰᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ
-[ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ]</b>"""
+[ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ]</blockquote></b>"""
 
     PLAN3_TXT = """
-<b>☝️ ꜱᴄᴀɴ ᴛʜɪꜱ QR ᴀɴᴅ ᴘᴀʏ 👆
+<b><blockquote>☝️ ꜱᴄᴀɴ ᴛʜɪꜱ QR ᴀɴᴅ ᴘᴀʏ 👆
 
 ➻ पेमैंट के बाद आपको बस screenshot सैंड करना होगा...।
 ➻ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ
@@ -301,7 +301,7 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 ━━━━━━━━━━━━━━━━━━━
 
 ɴᴏᴛᴇ : ꜱᴇɴᴅ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ᴀꜰᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ
-[ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ]</b>"""
+[ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ ʟɪsᴛ]</blockquote></b>"""
 
     
     RESTART_TXT = """
