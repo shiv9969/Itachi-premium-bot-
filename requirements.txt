@@ -12,7 +12,7 @@ pytz
 aiohttp
 cinemagoer
 shortzy
-
+pyrofork
 PyLeaves==1.0.2
 cinemagoer
 shortzy
