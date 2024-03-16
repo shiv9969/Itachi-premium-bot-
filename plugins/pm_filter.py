@@ -74,14 +74,14 @@ async def stream_download(bot, query):
             ]
         ]
     ))
-    else:
-#        await query.answer("ये सिर्फ प्रिमियम User के लिए है...😒", show_alert=True)
-        await query.message.reply_text(
-            text=f"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ 💎', url='https://t.me/TheHappyHourBot?start=TheHappyHour'),
-                                            InlineKeyboardButton('💥 ꜰᴜᴛᴜʀᴇꜱ 💥', url='https://graph.org/The-Happy-Hour-12-22-2')]])
-        )
+else:
+#       await query.answer("ये सिर्फ प्रिमियम User के लिए है...😒", show_alert=True)
+    await query.message.reply_text(
+        text=f"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ 💎', url='https://t.me/TheHappyHourBot?start=TheHappyHour'),
+                                        InlineKeyboardButton('💥 ꜰᴜᴛᴜʀᴇꜱ 💥', url='https://graph.org/The-Happy-Hour-12-22-2')]])
+    )
         
 @Client.on_callback_query(filters.regex(r"^stream"))
 async def stream_downloader(bot, query):
