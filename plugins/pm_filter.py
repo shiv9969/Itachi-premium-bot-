@@ -40,7 +40,7 @@ CAP = {}
 
 @Client.on_callback_query(filters.regex(r"^not_premium"))
 async def stream_download(bot, query):
-    if await db.has_premium_access(query.from_user.id):
+#    if await db.has_premium_access(query.from_user.id):
         file_id = query.data.split('#', 1)[1]
         msg = await bot.send_cached_media(
             chat_id=BIN_CHANNEL,
@@ -74,8 +74,8 @@ async def stream_download(bot, query):
                 ]
             ]
         ))
-    else:
-        await query.answer("ये सिर्फ प्रिमियम User के लिए है...😒", show_alert=True)
+ #   else:
+    #    await query.answer("ये सिर्फ प्रिमियम User के लिए है...😒", show_alert=True)
         await query.message.reply_text(
             text=f"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
             disable_web_page_preview=True,
