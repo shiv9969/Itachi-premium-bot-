@@ -74,7 +74,7 @@ async def stream_download(bot, query):
             ]
         ]
     ))
-else:
+    else:
 #        await query.answer("ये सिर्फ प्रिमियम User के लिए है...😒", show_alert=True)
         await query.message.reply_text(
             text=f"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
