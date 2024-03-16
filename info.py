@@ -50,11 +50,11 @@ premium = environ.get('PREMIUM_LOGS', '-1002114337101')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 
 IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'aslink.in')
-IMPORT_JK_API = environ.get('IMPORT_JK_API', '370d86aff9350b5f15251ea239ab9c5a4afcf257')
+IMPORT_JK_API = environ.get('IMPORT_JK_API', '5ac38b001121d7e9d51194f15c3f7ac16517b09d')
 SHORT_MODE = is_enabled((environ.get("SHORT_MODE","False")), False)
 
 # Others
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Niko_Roben")
 VERIFY2_URL = environ.get('VERIFY2_URL', "aslink.in")
 VERIFY2_API = environ.get('VERIFY2_API', "370d86aff9350b5f15251ea239ab9c5a4afcf257")
