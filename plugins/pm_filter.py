@@ -40,42 +40,42 @@ CAP = {}
 
 @Client.on_callback_query(filters.regex(r"^not_premium"))
 async def stream_download(bot, query):
-#    if await db.has_premium_access(query.from_user.id):
-    file_id = query.data.split('#', 1)[1]
-    msg = await bot.send_cached_media(
-        chat_id=BIN_CHANNEL,
-        file_id=file_id)
-    user_id = query.from_user.id
-    username =  query.from_user.mention 
-    online = await import_site(f"{URL}watch/{msg.id}")
-    download = await import_site(f"{URL}download/{msg.id}")
+    if await db.has_premium_access(query.from_user.id):
+        file_id = query.data.split('#', 1)[1]
+        msg = await bot.send_cached_media(
+            chat_id=BIN_CHANNEL,
+            file_id=file_id)
+        user_id = query.from_user.id
+        username =  query.from_user.mention 
+        online = await import_site(f"{URL}watch/{msg.id}")
+        download = await import_site(f"{URL}download/{msg.id}")
     
-    await msg.reply_text(
-        text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
-                                        InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=online)]])
-    )
-    await query.answer("अगर आपको सब तरह के AD दूर करने हे तो ᴘʀᴇᴍɪᴜᴍ ʙᴜʏ करना होगा...✅\n\nAD फ्री सर्विस सिर्फ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ हैं ।\n\nᴀᴅ-ꜰʀᴇᴇ ꜱᴇʀᴠɪᴄᴇ ᴏɴʟʏ ꜰᴏʀ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ....😒", show_alert=True)
-    await query.message.reply_text(
-        text=f"सब तरह के AD दूर करने हे तो ᴘʀᴇᴍɪᴜᴍ ʙᴜʏ करना होगा...✅",
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ 💎', url='https://t.me/TheHappyHourBot?start=TheHappyHour'),
-                                        InlineKeyboardButton('💥 ꜰᴜᴛᴜʀᴇꜱ 💥', url='https://graph.org/The-Happy-Hour-12-22-2')]])
-    )
-    await query.edit_message_reply_markup(
-        reply_markup=InlineKeyboardMarkup(
-        [
+        await msg.reply_text(
+            text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
+                                            InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=online)]])
+        )
+        await query.answer("अगर आपको सब तरह के AD दूर करने हे तो ᴘʀᴇᴍɪᴜᴍ ʙᴜʏ करना होगा...✅\n\nAD फ्री सर्विस सिर्फ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ हैं ।\n\nᴀᴅ-ꜰʀᴇᴇ ꜱᴇʀᴠɪᴄᴇ ᴏɴʟʏ ꜰᴏʀ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ....😒", show_alert=True)
+        await query.message.reply_text(
+            text=f"सब तरह के AD दूर करने हे तो ᴘʀᴇᴍɪᴜᴍ ʙᴜʏ करना होगा...✅",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ 💎', url='https://t.me/TheHappyHourBot?start=TheHappyHour'),
+                                            InlineKeyboardButton('💥 ꜰᴜᴛᴜʀᴇꜱ 💥', url='https://graph.org/The-Happy-Hour-12-22-2')]])
+        )
+        await query.edit_message_reply_markup(
+            reply_markup=InlineKeyboardMarkup(
             [
-                InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
-                InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
-            ],[
-                InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
+                [
+                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
+                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
+                ],[
+                    InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
+                ]
             ]
-        ]
-    ))
- #   else:
-    #    await query.answer("ये सिर्फ प्रिमियम User के लिए है...😒", show_alert=True)
+        ))
+    else:
+        await query.answer("ये सिर्फ प्रिमियम User के लिए है...😒", show_alert=True)
         await query.message.reply_text(
             text=f"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
             disable_web_page_preview=True,
@@ -112,7 +112,7 @@ async def stream_downloader(bot, query):
     ))
 
 
-@Client.on_message(filters.group & filters.text & filters.incoming)
+@Client.on_message(filters.group | filters.private & filters.text & filters.incoming)
 async def give_filter(client, message):
     if message.chat.id != SUPPORT_CHAT_ID:
         glob = await global_filters(client, message)
@@ -162,7 +162,7 @@ async def pm_text(bot, message):
     user_id = message.from_user.id
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
-    await message.reply_text("<b>Request Here - t.me/ThappyHour\nRequest Here - t.me/ThappyHour</b>")
+    await message.reply_text("<b>Type & Get - t.me/ThappyHour</b>")
     await bot.send_message(
         chat_id=LOG_CHANNEL,
         text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
