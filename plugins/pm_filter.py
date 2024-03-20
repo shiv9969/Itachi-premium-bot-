@@ -112,7 +112,7 @@ async def stream_downloader(bot, query):
     ))
 
 
-@Client.on_message(filters.group & filters.text & filters.incoming)
+@Client.on_message(filters.group | filters.private & filters.text & filters.incoming)
 async def give_filter(client, message):
     if message.chat.id != SUPPORT_CHAT_ID:
         glob = await global_filters(client, message)
@@ -162,7 +162,7 @@ async def pm_text(bot, message):
     user_id = message.from_user.id
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
-    await message.reply_text("<b>Type & Get - t.me/ThappyHour</b>")
+    await message.reply_text("<b>Type & Get - t.me/Happy_Hour_Friends</b>")
     await bot.send_message(
         chat_id=LOG_CHANNEL,
         text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
@@ -193,7 +193,6 @@ async def next_page(bot, query):
         return
     settings = await get_settings(query.message.chat.id)
     temp.SEND_ALL_TEMP[query.from_user.id] = files
-    temp.GETALL[key] = files
     files_link = ''
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -229,6 +228,10 @@ async def next_page(bot, query):
             for file in files
         ]
     elif settings['button'] and not ENABLE_SHORTLINK:
+        btn = []
+        for file in files:
+            files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
+    else:
         btn = [
             [
                 InlineKeyboardButton(
@@ -237,10 +240,6 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
-    else:
-        btn = []
-        for file in files:
-            files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
     try:
         if settings['max_btn']:
             if 0 < offset <= 10:
@@ -311,7 +310,7 @@ async def next_page(bot, query):
         InlineKeyboardButton("Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}"),
+        InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=f"send_fall#files#{offset}#{req}"),
     ])
     try:
         await query.message.edit_text(text=cap + files_link, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
@@ -336,7 +335,6 @@ async def language_check(bot, query):
     if files:
         settings = await get_settings(query.message.chat.id)
         temp.SEND_ALL_TEMP[query.from_user.id] = files
-        key = f"{query.message.chat.id}-{query.message.id}"
         files_link = ''
         if 'is_shortlink' in settings.keys():
             ENABLE_SHORTLINK = settings['is_shortlink']
@@ -368,25 +366,25 @@ async def language_check(bot, query):
                 for file in files
             ]
         elif settings['button'] and not ENABLE_SHORTLINK:
-            btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", url=f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"
-                ),
-            ]
-            for file in files
-        ]
-        else:
             btn = []
-        for file in files:
-            files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
+            for file in files:
+                files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
+        else:
+            btn = [
+                [
+                    InlineKeyboardButton(
+                        text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", url=f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"
+                    ),
+                ]
+                for file in files
+            ]
         btn.insert(0, [
             InlineKeyboardButton("Sᴇʟᴇᴄᴛ Aɢᴀɪɴ", callback_data=f"select_lang#{userid}"),
             InlineKeyboardButton("Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
         ])
 
         btn.insert(0, [
-            InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
+            InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=f"send_fall#{pre}#{0}#{userid}")
         ])
 
         if offset != "":
@@ -468,7 +466,6 @@ async def quality_check(bot, query):
     if files:
         settings = await get_settings(query.message.chat.id)
         temp.SEND_ALL_TEMP[query.from_user.id] = files
-        key = f"{query.message.chat.id}-{query.message.id}"
         files_link = ''
         if 'is_shortlink' in settings.keys():
             ENABLE_SHORTLINK = settings['is_shortlink']
@@ -500,25 +497,25 @@ async def quality_check(bot, query):
                 for file in files
             ]
         elif settings['button'] and not ENABLE_SHORTLINK:
-            btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", url=f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"
-                ),
-            ]
-            for file in files
-        ]
-        else:
             btn = []
-        for file in files:
-            files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
+            for file in files:
+                files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
+        else:
+            btn = [
+                [
+                    InlineKeyboardButton(
+                        text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", url=f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"
+                    ),
+                ]
+                for file in files
+            ]
         btn.insert(0, [
             InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
             InlineKeyboardButton("Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
         ])
 
         btn.insert(0, [
-            InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
+            InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=f"send_fall#{pre}#{0}#{userid}")
         ])
 
         if offset != "":
@@ -593,7 +590,6 @@ async def seasons_check(bot, query):
     if files:
         settings = await get_settings(query.message.chat.id)
         temp.SEND_ALL_TEMP[query.from_user.id] = files
-        key = f"{query.message.chat.id}-{query.message.id}"
         files_link = ''
         if 'is_shortlink' in settings.keys():
             ENABLE_SHORTLINK = settings['is_shortlink']
@@ -625,25 +621,25 @@ async def seasons_check(bot, query):
                 for file in files
             ]
         elif settings['button'] and not ENABLE_SHORTLINK:
-            btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", url=f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"
-                ),
-            ]
-            for file in files
-        ]
-        else:
             btn = []
-        for file in files:
-            files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
+            for file in files:
+                files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
+        else:
+            btn = [
+                [
+                    InlineKeyboardButton(
+                        text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", url=f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"
+                    ),
+                ]
+                for file in files
+            ]
         btn.insert(0, [
             InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
             InlineKeyboardButton("Sᴇʟᴇᴄᴛ Aɢᴀɪɴ", callback_data=f"jk_dev#{userid}")
         ])
 
         btn.insert(0, [
-            InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
+            InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=f"send_fall#{pre}#{0}#{userid}")
         ])
 
         if offset != "":
@@ -1015,8 +1011,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                 [
                                 InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
                             ],[
-                            InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
-                            ]
+                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    ]
                                 ]
                             )
                         )
@@ -1032,8 +1028,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                 [
                                 InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
                             ],[
-                            InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
-                            ]
+                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    ]
                                 ]
                             )
                         )
@@ -1046,29 +1042,93 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-            
-    elif query.data.startswith("sendfiles"):
-        clicked = query.from_user.id
-        key = query.data.split("#")
-        settings = await get_settings(query.message.chat.id)
-        try:
-            if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=sendfiles1_{key}")
-                return
+    elif query.data.startswith("checksub"):
+        if AUTH_CHANNEL and not await is_subscribed(client, query):
+            await query.answer("Jᴏɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
+            return
+        ident, file_id = query.data.split("#")
+        if file_id == "send_all":
+            send_files = temp.SEND_ALL_TEMP.get(query.from_user.id)
+            is_over = await send_all(client, query.from_user.id, send_files, ident)
+            if is_over == 'done':
+                return await query.answer(f"आपको मूवी पर्सनलचैट में भेजा है...✅\n\nFile Send Successfully ✅", show_alert=True)
+            elif is_over == 'fsub':
+                return await query.answer("Hᴇʏ, Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ ɪɴ ᴍʏ ʙᴀᴄᴋ ᴜᴘ ᴄʜᴀɴɴᴇʟ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴊᴏɪɴ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
+            elif is_over == 'jeetu':
+                return await query.answer("आपको मूवी पर्सनलचैट में भेजा है...✅\n\nFile Send Successfully ✅", show_alert=True)
+            elif is_over == 'verify':
+                return await query.answer("Hᴇʏ, Yᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ. Yᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴠᴇʀɪғʏ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
             else:
-                await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
-                return
-        except UserIsBlocked:
-            await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !', show_alert=True)
-        except PeerIdInvalid:
-            await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=sendfiles3_{key}")
-        except Exception as e:
-            logger.exception(e)
-            await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=sendfiles4_{key}")
-    
+                return await query.answer(f"Eʀʀᴏʀ: {is_over}", show_alert=True)
+        files_ = await get_file_details(file_id)
+        if not files_:
+            return await query.answer('Nᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛ.')
+        files = files_[0]
+        title = files.file_name
+        size = get_size(files.file_size)
+        f_caption = files.caption
+        if CUSTOM_FILE_CAPTION:
+            try:
+                f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
+                                                       file_size='' if size is None else size,
+                                                       file_caption='' if f_caption is None else f_caption)
+            except Exception as e:
+                logger.exception(e)
+                f_caption = f_caption
+        if f_caption is None:
+            f_caption = f"{title}"
+        await query.answer()
+        if IS_VERIFY and not await check_verification(client, query.from_user.id):
+            btn = [[
+                InlineKeyboardButton("Vᴇʀɪғʏ", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
+                InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
+            ],[
+            InlineKeyboardButton("⛥ ʀᴇᴍᴏᴠᴇ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ⛥", url="https://t.me/TheHappyHourBOT?start=TheHappyHour")
+          ]]
+            await client.send_message(
+                chat_id=query.from_user.id,
+                text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन \nजरूरी हे !\n\nJust 10 second Bro 🥲\n\nAfter Get Unlimited Movies...✅</b>",
+                protect_content=True if ident == 'checksubp' else False,
+                disable_web_page_preview=True,
+                parse_mode=enums.ParseMode.HTML,
+                reply_markup=InlineKeyboardMarkup(btn)
+            )
+            return
+            await client.send_cached_media(
+                chat_id=query.from_user.id,
+                file_id=file_id,
+                caption=f_caption,
+                protect_content=True if ident == 'checksubp' else False,
+                reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                  InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
+               ],[
+                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    ]
+                ]
+            )
+        )
     elif query.data == "pages":
         await query.answer()
-        
+
+    elif query.data.startswith("send_fall"):
+        temp_var, ident, offset, userid = query.data.split("#")
+        if int(userid) not in [query.from_user.id, 0]:
+            return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+        files = temp.SEND_ALL_TEMP.get(query.from_user.id)
+        is_over = await send_all(client, query.from_user.id, files, ident)
+        if is_over == 'done':
+            return await query.answer(f"आपको मूवी पर्सनलचैट में भेजा है...✅\n\nFile Send Successfully ✅", show_alert=True)
+        elif is_over == 'fsub':
+            return await query.answer("Hᴇʏ, Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ ɪɴ ᴍʏ ʙᴀᴄᴋ ᴜᴘ ᴄʜᴀɴɴᴇʟ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴊᴏɪɴ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
+        elif is_over == 'jeetu':
+            return await query.answer("आपको मूवी पर्सनलचैट में भेजा है...✅\n\nFile Send Successfully ✅", show_alert=True)
+        elif is_over == 'verify':
+            return await query.answer("Hᴇʏ, Yᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ. Yᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴠᴇʀɪғʏ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
+        else:
+            return await query.answer(f"Eʀʀᴏʀ: {is_over}", show_alert=True)
+
     elif query.data.startswith("killfilesdq"):
         ident, keyword = query.data.split("#")
         await query.message.edit_text(f"<b>Fᴇᴛᴄʜɪɴɢ Fɪʟᴇs ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {keyword} ᴏɴ DB... Pʟᴇᴀsᴇ ᴡᴀɪᴛ...</b>")
@@ -1384,10 +1444,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='kushal'),
                     InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
                   ],[
-                    InlineKeyboardButton('⛥ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ⛥', callback_data='kushal')
-                  ],[
                     InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
-                  ]]
+                    ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1961,11 +2019,11 @@ async def auto_filter(client, msg, spoll=False):
         if len(message.text) < 100:
             search = message.text
             m=await message.reply_sticker(sticker="CAACAgIAAxkBAAEX9rZlrzK7LG96b1yVJhnhA0RGfT8L9gACnFwBAAFji0YM2veI_Lsd8FIeBA",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴.....", url=CHNL_LNK)]]))
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("The Happy Hour", url=CHNL_LNK)]]))
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in", "hindi", "dubbed", "dub", "english", "bhai", "bro", "brother", "upload", "series", "webseris", "HD", "full", "horror", "thriller", "mystery", "plseas" "print", "file", "send", "chahiye", "chiye", "movi", "movie", "bhejo", "dijiye", "jaldi", "karo"]
+            removes = ["in", "hindi", "english", "bhai", "bro", "brother", "upload", "series", "webseris", "HD", "full", "horror", "thriller", "mystery", "plseas" "print", "file", "send", "chahiye", "chiye", "movi", "movie", "bhejo", "dijiye", "jaldi", "karo"]
             for x in find:
                 if x in removes:
                     continue
@@ -1990,12 +2048,10 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
         m=await message.reply_sticker(sticker="CAACAgIAAxkBAAEX9rZlrzK7LG96b1yVJhnhA0RGfT8L9gACnFwBAAFji0YM2veI_Lsd8FIeBA",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴.....", url=CHNL_LNK)]]))
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("The Happy Hour", url=CHNL_LNK)]]))
         settings = await get_settings(message.chat.id)
     temp.SEND_ALL_TEMP[message.from_user.id] = files
     temp.KEYWORD[message.from_user.id] = search
-    key = f"{message.chat.id}-{message.id}"
-    temp.GETALL[key] = files
     files_link = ''
     if 'is_shortlink' in settings.keys():
         ENABLE_SHORTLINK = settings['is_shortlink']
@@ -2027,6 +2083,10 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
     elif settings["button"] and not ENABLE_SHORTLINK:
+        btn = []
+        for file in files:
+            files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
+    else:
         btn = [
             [
                 InlineKeyboardButton(
@@ -2035,10 +2095,6 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-    else:
-        btn = []
-        for file in files:
-            files_link += f"""<b>\n\n➣ <a href=https://t.me/{temp.U_NAME}?start=files_{file.file_id}>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}</a></b>"""
         
     btn.insert(0, [
         InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇs", callback_data=f"select_lang#{message.from_user.id}"),
@@ -2046,7 +2102,7 @@ async def auto_filter(client, msg, spoll=False):
     ])
 
     btn.insert(0, [
-        InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}"),
+        InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}"),
     ])
 
     if offset != "":
@@ -2171,7 +2227,7 @@ async def advantage_spell_chok(client, msg):
     settings = await get_settings(msg.chat.id)
     find = mv_rqst.split(" ")
     query = ""
-    removes = ["in", "hindi", "dubbed", "dub", "english", "bhai", "bro", "brother", "upload", "series", "webseris", "HD", "full", "horror", "thriller", "mystery", "plseas" "print", "file", "send", "chahiye", "chiye", "movi", "movie", "bhejo", "dijiye", "jaldi", "karo"]
+    removes = ["in", "hindi", "english", "bhai", "bro", "brother", "upload", "series", "webseris", "HD", "full", "horror", "thriller", "mystery", "plseas" "print", "file", "send", "chahiye", "chiye", "movi", "movie", "bhejo", "dijiye", "jaldi", "karo"]
     for x in find:
         if x in removes:
             continue
