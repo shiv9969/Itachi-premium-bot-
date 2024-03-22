@@ -210,8 +210,7 @@ Sᴇᴀʀᴄʜ Wᴇʙ Sᴇʀɪᴇs Iɴ ᴛʜɪs Fᴏʀᴍᴀᴛᴇ :
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
-    CAPTION = """<blockquote>
-<b><a href="https://t.me/ThappyHour">{file_name}</a></b></blockquote>"""
+    CAPTION = """<b><blockquote><a href="https://t.me/ThappyHour">{file_name}</a></blockquote></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b><blockquote>
