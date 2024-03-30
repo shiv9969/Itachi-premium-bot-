@@ -83,7 +83,7 @@ async def stream_download(bot, query):
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
                                                 InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=online)]])
             )
-            await query.edit_message_reply_markup(
+        await query.edit_message_reply_markup(
                 reply_markup=InlineKeyboardMarkup(
                 [
                     [
