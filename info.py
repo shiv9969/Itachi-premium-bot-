@@ -51,17 +51,17 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 premium = environ.get('PREMIUM_LOGS', '-1002114337101')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 
-IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'aslink.in')
-IMPORT_JK_API = environ.get('IMPORT_JK_API', '5ac38b001121d7e9d51194f15c3f7ac16517b09d')
+IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'goo.aslink.in')
+IMPORT_JK_API = environ.get('IMPORT_JK_API', 'c5ecbd7b5e088fd1c8b755f331d055c27d3b2fa7')
 SHORT_MODE = is_enabled((environ.get("SHORT_MODE","False")), False)
 
 # Others
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Niko_Roben")
-VERIFY2_URL = environ.get('VERIFY2_URL', "aslink.in")
-VERIFY2_API = environ.get('VERIFY2_API', "370d86aff9350b5f15251ea239ab9c5a4afcf257")
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'aslink.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '370d86aff9350b5f15251ea239ab9c5a4afcf257')
+VERIFY2_URL = environ.get('VERIFY2_URL', "goo.aslink.in")
+VERIFY2_API = environ.get('VERIFY2_API', "c5ecbd7b5e088fd1c8b755f331d055c27d3b2fa7")
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'goo.aslink.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'c5ecbd7b5e088fd1c8b755f331d055c27d3b2fa7')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001966591245').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "7")
