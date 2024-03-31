@@ -740,7 +740,7 @@ async def send_all(bot, userid, files, ident):
                             [
                             InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file.file_id}")
                         ],[
-                        InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                        InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
                         ]
                         ]
                     )
