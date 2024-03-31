@@ -30,7 +30,7 @@ async def start(client, message):
                     InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='kushal'),
                     InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
                   ],[
-                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
                     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -58,7 +58,7 @@ async def start(client, message):
                     InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='kushal'),
                     InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
                   ],[
-                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
                     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -105,7 +105,7 @@ async def start(client, message):
                     InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='kushal'),
                     InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
                   ],[
-                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
                     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -158,7 +158,7 @@ async def start(client, message):
                          [
                           InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
                        ],[
-                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
                     ]
                         ]
                     )
@@ -177,7 +177,7 @@ async def start(client, message):
                           InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
                           
                        ],[
-                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
                     ]
                         ]
                     )
@@ -281,7 +281,7 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(btn)
         await message.reply_photo(
         photo="https://telegra.ph/file/71be8b45fd8da04a6531c.jpg",
-        caption="""<b>
+        caption="""<blockquote><b>
         <a href='https://graph.org/The-Happy-Hour-12-22-2'>💥 ᴘʀᴇᴍɪᴜᴍ ᴘʀɪᴄᴇ 💥
         
 1 Wᴇᴇᴋ = [50 + 0] Rs
@@ -292,7 +292,7 @@ async def start(client, message):
 1 Yᴇᴀʀ = [50 + 150] Rs
 
 ⚡ᴄʜᴀᴄᴋ ᴘʀᴇᴍɪᴜᴍ ꜰᴜᴛᴜʀᴇꜱ⚡
-ㅤㅤㅤㅤㅤ</a></b>""",
+ㅤㅤㅤㅤㅤ</a></b></blockquote>""",
             reply_markup=reply_markup
         )
         return
@@ -324,7 +324,7 @@ async def start(client, message):
                       InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
               
                    ],[
-                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
                     ]
                     ]
                 )
@@ -381,7 +381,7 @@ async def start(client, message):
              InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
               
            ],[
-                    InlineKeyboardButton('❤️ Sᴜʙꜱᴄʀɪʙᴇ Fᴏʀ Mᴏᴠɪᴇ Sᴜɢɢᴇꜱᴛɪᴏɴ ❤️', url='https://www.youtube.com/@ThappyHour')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
                     ]
             ]
         )
