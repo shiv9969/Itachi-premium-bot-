@@ -2,7 +2,7 @@ import asyncio
 import logging
 from info import *
 from pyrogram import Client
-from SAFARI.util.config_parser import TokenParser
+from SAFARI.utils.config_parser import TokenParser
 from SAFARI.utils import multi_clients, work_loads, SafariBot
 
 
