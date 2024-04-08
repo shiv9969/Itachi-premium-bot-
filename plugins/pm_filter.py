@@ -30,6 +30,8 @@ from database.gfilters_mdb import (
     del_allg
 )
 import logging
+from urllib.parse import quote_plus
+from SAFARI.utils.file_properties import get_name, get_hash, get_media_file_size
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
@@ -41,18 +43,19 @@ CAP = {}
 @Client.on_callback_query(filters.regex(r"^stream"))
 async def stream_download(bot, query):
     file_id = query.data.split('#', 1)[1]
-    msg = await bot.send_cached_media(
+    log_msg = await bot.send_cached_media(
         chat_id=BIN_CHANNEL,
         file_id=file_id)
     user_id = query.from_user.id
     username =  query.from_user.mention 
-    online = f"{URL}watch/{msg.id}"
-    download = f"{URL}download/{msg.id}"
+    file_Name = {quote_plus(get_name(log_msg))}
+    online = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+    download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
     non_online = await import_site(online)
     non_download = await import_site(download)
     if not await db.has_premium_access(query.from_user.id) and STREAM_MODE == True:
-        await msg.reply_text(
-            text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
+        await log_msg.reply_text(
+            text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}\n\n📁ғɪʟᴇ ɴᴀᴍᴇ: {file_name}",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
                                             InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=non_online)]])
@@ -76,8 +79,8 @@ async def stream_download(bot, query):
             ]
         ))
     else:
-        await msg.reply_text(
-                text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
+        await log_msg.reply_text(
+                text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}\n\n📁ғɪʟᴇ ɴᴀᴍᴇ: {file_name}",
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
                                                 InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=online)]])
