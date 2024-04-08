@@ -48,14 +48,14 @@ async def stream_download(bot, query):
         file_id=file_id)
     user_id = query.from_user.id
     username =  query.from_user.mention 
-    file_Name = {quote_plus(get_name(log_msg))}
+    #file_Name = {quote_plus(get_name(log_msg))}
     online = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
     download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
     non_online = await import_site(online)
     non_download = await import_site(download)
     if not await db.has_premium_access(query.from_user.id) and STREAM_MODE == True:
         await log_msg.reply_text(
-            text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}\n\n📁ғɪʟᴇ ɴᴀᴍᴇ: {file_name}",
+            text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
                                             InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=non_online)]])
@@ -80,7 +80,7 @@ async def stream_download(bot, query):
         ))
     else:
         await log_msg.reply_text(
-                text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}\n\n📁ғɪʟᴇ ɴᴀᴍᴇ: {file_name}",
+                text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
                                                 InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=online)]])
