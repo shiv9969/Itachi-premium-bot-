@@ -60,12 +60,11 @@ async def stream_download(bot, query):
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
                                             InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=non_online)]])
         )
-        await query.answer("ꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ...✅", show_alert=True)
+        await query.answer("ꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ....🌿\nꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ....🌿\n\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺", show_alert=True)
         await query.message.reply_text(
-            text=f"ᴀᴅ-ꜰʀᴇᴇ ꜱᴇʀᴠɪᴄᴇ ᴏɴʟʏ ꜰᴏʀ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ...🙃",
+            text=f"ʏᴏᴜʀ ꜱᴛʀᴇᴇᴍ & ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ɪꜱ ɢᴇɴᴇʀᴀᴛᴇᴅ....✅",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ 💎', url='https://t.me/TheHappyHourBot?start=TheHappyHour'),
-                                            InlineKeyboardButton('💥 ꜰᴜᴛᴜʀᴇꜱ 💥', url='https://graph.org/The-Happy-Hour-12-22-2')]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('📚 ʜᴏᴡ ᴛᴏ ꜱᴛʀᴇᴇᴍ ᴏɴʟɪɴᴇ 📚', url='https://t.me/TheHappyHourBot?start=ZmlsZV9CQUFEQkFBRFJSUUFBdTItSVZHV3h6cEpMRk8tZ2hZRQ')]])
         )
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(
