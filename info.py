@@ -26,7 +26,7 @@ NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/54c916b164355510097fa.j
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/54c916b164355510097fa.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/54c916b164355510097fa.jpg")
 
-STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "false")), False)
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1991522624 1197918807').split()]
