@@ -13,20 +13,20 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '24579842'))
-API_HASH = environ.get('API_HASH', 'ec6105bf1a02c98f837300546dc341d1')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6596630313:AAHYsHgQzWs5atcOF1AIdODVCtldfQ0MbdU")
+API_ID = int(environ.get('API_ID', '20678315'))
+API_HASH = environ.get('API_HASH', '5522342962f32f8fb46903effb5ce41f')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7024921224:AAE8fFDPZNPppTk0j4wXGLleCMcW6PuHxKA")
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 150))
 USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
 
-PICS = (environ.get('PICS', 'https://graph.org/file/6092ad90bdc8b12dbf4b2.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/6092ad90bdc8b12dbf4b2.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/030bd90333f090dafe064.jpg")
-SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/6092ad90bdc8b12dbf4b2.jpg")
+PICS = (environ.get('PICS', 'https://graph.org/file/54c916b164355510097fa.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/54c916b164355510097fa.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/54c916b164355510097fa.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/54c916b164355510097fa.jpg")
 
-STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1991522624').split()]
