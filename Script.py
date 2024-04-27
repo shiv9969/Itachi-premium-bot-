@@ -1,13 +1,13 @@
 class script(object):
     START_TXT = """<b><blockquote>
-Mʏ Nᴀᴍᴇ Is #Minato, I Cᴀɴ Pʀᴏᴠɪᴅᴇ <a href='https://t.me/The_Happy_Hour_Hindi'>Mᴏᴠɪᴇs</a>, Jᴜsᴛ Aᴅᴅ Mᴇ Tᴏ <a href='https://t.me/ThappyHour'>Yᴏᴜʀ Gʀᴏᴜᴘ</a> Aɴᴅ Eɴᴊᴏʏ.</blockquote></b>"""
+Mʏ Nᴀᴍᴇ Is #Minato, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs</blockquote></b>"""
 
     HELP_TXT = """<b><blockquote>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b></blockquote>"""
 
     ABOUT_TXT = """<b><blockquote>✯ Mʏ Nᴀᴍᴇ: {}
-✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/Master_Jiraya_Bot'>Master Jiraya</a>
-✯ Lɪʙʀᴀʀʏ: <a href='https://t.me/ThappyHour'>Pʏʀᴏɢʀᴀᴍ</a>
+✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/ANKIT3690'>Ankit</a>
+✯ Lɪʙʀᴀʀʏ: <a href='https://t.me/ANKIT3690'>Pʏʀᴏɢʀᴀᴍ</a>
 ✯ Lᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
 ✯ DᴀᴛᴀBᴀsᴇ: MᴏɴɢᴏDB
 ✯ Bᴏᴛ Sᴇʀᴠᴇʀ: Vs Code Live Server
@@ -210,7 +210,7 @@ Sᴇᴀʀᴄʜ Wᴇʙ Sᴇʀɪᴇs Iɴ ᴛʜɪs Fᴏʀᴍᴀᴛᴇ :
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
-    CAPTION = """<b><blockquote><a href="https://t.me/ThappyHour">{file_name}</a></blockquote></b>"""
+    CAPTION = """<b><blockquote><a href="https://t.me/defenderofthemultiverse">{file_name}</a></blockquote></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b><blockquote>
@@ -311,4 +311,4 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
 🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v2.7.1 [ Sᴛᴀʙʟᴇ ]</code></b>"""
 
-    LOGO = """❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️"""                                                                                  
+    LOGO = """Hay Mr Sigma Ankit 😉, Your Bot Is Working ❤️"""                                                                                  
