@@ -60,11 +60,11 @@ async def stream_download(bot, query):
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
                                             InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=non_online)]])
         )
-        await query.answer("ꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ....🌿\nꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ....🌿\n\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺", show_alert=True)
+        await query.answer("ꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ....🌿", show_alert=True)
         await query.message.reply_text(
             text=f"ʏᴏᴜʀ ꜱᴛʀᴇᴇᴍ & ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ɪꜱ ɢᴇɴᴇʀᴀᴛᴇᴅ....✅",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('📚 ʜᴏᴡ ᴛᴏ ꜱᴛʀᴇᴇᴍ ᴏɴʟɪɴᴇ 📚', url='https://t.me/TheHappyHourBot?start=ZmlsZV9CQUFEQkFBRFJSUUFBdTItSVZHV3h6cEpMRk8tZ2hZRQ')]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('📚 ʜᴏᴡ ᴛᴏ ꜱᴛʀᴇᴇᴍ ᴏɴʟɪɴᴇ 📚', url='https://t.me/thewarriorsreal')]])
         )
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(
@@ -73,7 +73,7 @@ async def stream_download(bot, query):
                     InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
                     InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=non_online)
                 ],[
-                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/thewarriorsreal')
                 ]
             ]
         ))
@@ -91,7 +91,7 @@ async def stream_download(bot, query):
                         InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
                         InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
                     ],[
-                        InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
+                        InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/thewarriorsreal')
                     ]
                 ]
             ))
@@ -146,7 +146,7 @@ async def pm_text(bot, message):
     user_id = message.from_user.id
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
-    await message.reply_text("<b>Type & Get - t.me/Happy_Hour_Friends</b>")
+    await message.reply_text("<b>Type & Get - t.me/thewarriorsreal</b>")
     await bot.send_message(
         chat_id=LOG_CHANNEL,
         text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
@@ -995,7 +995,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                 [
                                 InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
                             ],[
-                    InlineKeyboardButton('🍁 ꜱᴇʟᴇᴄᴛ ᴄʜᴀᴛ & ꜱʜᴀʀᴇ ʙᴏᴛ 🍁', url='https://t.me/share/url?url=%F0%9F%91%89%20%C9%AA%EA%9C%B0%20%CA%8F%E1%B4%8F%E1%B4%9C%20%C9%B4%E1%B4%87%E1%B4%87%E1%B4%85%20%E1%B4%80%C9%B4%CA%8F%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%2C%20%EA%9C%B1%E1%B4%87%CA%80%C9%AA%E1%B4%87%EA%9C%B1%20%26%20%0A%E1%B4%80%C9%B4%C9%AA%E1%B4%8D%E1%B4%87%20-%20%E1%B4%8A%E1%B4%9C%EA%9C%B1%E1%B4%9B%20%E1%B4%9B%CA%8F%E1%B4%98%E1%B4%87%20%C9%B4%E1%B4%80%E1%B4%8D%E1%B4%87%20%26%20%C9%A2%E1%B4%87%E1%B4%9B%20%C9%AA%C9%B4%203%20%EA%9C%B1%E1%B4%87%E1%B4%84%E1%B4%8F%C9%B4%E1%B4%85%20%E2%9C%85%0A%0A%E1%B4%8A%E1%B4%8F%C9%AA%C9%B4%20%E1%B4%8F%E1%B4%9C%CA%80%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%CA%80%E1%B4%87%C7%AB%E1%B4%9C%E1%B4%87%EA%9C%B1%E1%B4%9B%20%C9%A2%CA%80%E1%B4%8F%E1%B4%9C%E1%B4%98%20%E2%9C%85%0A%F0%9F%91%89%20%40ThappyHour%20%0A%F0%9F%91%89%20%40ThappyHour%0A%0A%E1%B4%8A%E1%B4%8F%C9%AA%C9%B4%20%EA%9C%B0%E1%B4%8F%CA%80%20%C9%B4%E1%B4%87%E1%B4%A1%20%CA%80%E1%B4%87%CA%9F%E1%B4%87%E1%B4%80%EA%9C%B1%E1%B4%87%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%E2%9C%85%0A%F0%9F%91%89%20%40The_Happy_Hour_Hindi%0A%F0%9F%91%89%20%40The_Happy_Hour_Hindi%0A%0A%F0%9F%91%89%20%E1%B4%9B%CA%9C%E1%B4%87%20%CA%9C%E1%B4%80%E1%B4%98%E1%B4%98%CA%8F%20%CA%9C%E1%B4%8F%E1%B4%9C%CA%80%E2%84%A2%20%E2%9C%85')
+                    InlineKeyboardButton('🍁 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🍁', url='https://t.me/thewarriorsreal')
                     ]
                                 ]
                             )
@@ -1071,7 +1071,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  [
                   InlineKeyboardButton("🖥️ ᴏɴʟɪɴᴇ ᴡᴀᴛᴄʜ / ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"stream#{file_id}")
                ],[
-                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/The_Happy_Hours')
+                    InlineKeyboardButton('🇮🇳 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🇮🇳', url='t.me/thewarriorsreal')
                     ]
                 ]
             )
@@ -1411,7 +1411,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='kushal'),
                     InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
                   ],[
-                    InlineKeyboardButton('🍁 ꜱᴇʟᴇᴄᴛ ᴄʜᴀᴛ & ꜱʜᴀʀᴇ ʙᴏᴛ 🍁', url='https://t.me/share/url?url=%F0%9F%91%89%20%C9%AA%EA%9C%B0%20%CA%8F%E1%B4%8F%E1%B4%9C%20%C9%B4%E1%B4%87%E1%B4%87%E1%B4%85%20%E1%B4%80%C9%B4%CA%8F%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%2C%20%EA%9C%B1%E1%B4%87%CA%80%C9%AA%E1%B4%87%EA%9C%B1%20%26%20%0A%E1%B4%80%C9%B4%C9%AA%E1%B4%8D%E1%B4%87%20-%20%E1%B4%8A%E1%B4%9C%EA%9C%B1%E1%B4%9B%20%E1%B4%9B%CA%8F%E1%B4%98%E1%B4%87%20%C9%B4%E1%B4%80%E1%B4%8D%E1%B4%87%20%26%20%C9%A2%E1%B4%87%E1%B4%9B%20%C9%AA%C9%B4%203%20%EA%9C%B1%E1%B4%87%E1%B4%84%E1%B4%8F%C9%B4%E1%B4%85%20%E2%9C%85%0A%0A%E1%B4%8A%E1%B4%8F%C9%AA%C9%B4%20%E1%B4%8F%E1%B4%9C%CA%80%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%CA%80%E1%B4%87%C7%AB%E1%B4%9C%E1%B4%87%EA%9C%B1%E1%B4%9B%20%C9%A2%CA%80%E1%B4%8F%E1%B4%9C%E1%B4%98%20%E2%9C%85%0A%F0%9F%91%89%20%40ThappyHour%20%0A%F0%9F%91%89%20%40ThappyHour%0A%0A%E1%B4%8A%E1%B4%8F%C9%AA%C9%B4%20%EA%9C%B0%E1%B4%8F%CA%80%20%C9%B4%E1%B4%87%E1%B4%A1%20%CA%80%E1%B4%87%CA%9F%E1%B4%87%E1%B4%80%EA%9C%B1%E1%B4%87%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%E2%9C%85%0A%F0%9F%91%89%20%40The_Happy_Hour_Hindi%0A%F0%9F%91%89%20%40The_Happy_Hour_Hindi%0A%0A%F0%9F%91%89%20%E1%B4%9B%CA%9C%E1%B4%87%20%CA%9C%E1%B4%80%E1%B4%98%E1%B4%98%CA%8F%20%CA%9C%E1%B4%8F%E1%B4%9C%CA%80%E2%84%A2%20%E2%9C%85')
+                    InlineKeyboardButton('🍁 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ 🍁', url='https://t.me/thewarriorsreal')
                     ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1986,7 +1986,7 @@ async def auto_filter(client, msg, spoll=False):
         if len(message.text) < 100:
             search = message.text
             m=await message.reply_sticker(sticker="CAACAgIAAxkBAAEX9rZlrzK7LG96b1yVJhnhA0RGfT8L9gACnFwBAAFji0YM2veI_Lsd8FIeBA",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("The Happy Hour", url=CHNL_LNK)]]))
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Plzz Wait", url=CHNL_LNK)]]))
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2015,7 +2015,7 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
         m=await message.reply_sticker(sticker="CAACAgIAAxkBAAEX9rZlrzK7LG96b1yVJhnhA0RGfT8L9gACnFwBAAFji0YM2veI_Lsd8FIeBA",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("The Happy Hour", url=CHNL_LNK)]]))
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Plzz Wait", url=CHNL_LNK)]]))
         settings = await get_settings(message.chat.id)
     temp.SEND_ALL_TEMP[message.from_user.id] = files
     temp.KEYWORD[message.from_user.id] = search
