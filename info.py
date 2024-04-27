@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '20678315'))
 API_HASH = environ.get('API_HASH', '5522342962f32f8fb46903effb5ce41f')
-BOT_TOKEN = environ.get('BOT_TOKEN', "7024921224:AAE8fFDPZNPppTk0j4wXGLleCMcW6PuHxKA")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6350375829:AAETurDXHwvaKNFd3Iz8rhwrJOiPatJk-fk")
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 150))
@@ -44,11 +44,11 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'False')), False)
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mogo004:mogo004@cluster0.zbfrafo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://kingofhell268:3rrk9V7ufyCF9gWz@cluster0.afgwdof.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "ANKIT")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
-premium = environ.get('PREMIUM_LOGS', '-1002114337101')
+premium = environ.get('PREMIUM_LOGS', '-1001424329361')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 
 IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'goo.aslink.in')
@@ -63,15 +63,15 @@ VERIFY2_API = environ.get('VERIFY2_API', "c5ecbd7b5e088fd1c8b755f331d055c27d3b2f
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'goo.aslink.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'c5ecbd7b5e088fd1c8b755f331d055c27d3b2fa7')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001966591245').split()]
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/thewarriorsreal')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/defenderofthemultiverse')
 MSG_ALRT = environ.get('MSG_ALRT', 'The Warriors Real')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002139657732))
-LAZY_GROUP_LOGS = int(environ.get('LAZY_GROUP_LOGS', -1002049370768))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001424329361))
+LAZY_GROUP_LOGS = int(environ.get('LAZY_GROUP_LOGS', -1001424329361))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'defenderofthemultiverse')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
@@ -91,7 +91,7 @@ PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
 # Streaming
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1001992201683")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1001424329361")
 if len(BIN_CHANNEL) == 0:
     logging.error('BIN_CHANNEL is missing, exiting now')
     exit()
