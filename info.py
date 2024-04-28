@@ -13,27 +13,27 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '24579842'))
-API_HASH = environ.get('API_HASH', 'ec6105bf1a02c98f837300546dc341d1')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6596630313:AAHYsHgQzWs5atcOF1AIdODVCtldfQ0MbdU")
+API_ID = int(environ.get('API_ID', '9301087'))
+API_HASH = environ.get('API_HASH', 'cbabdb3f23de6326352ef3ac26338d9c')
+BOT_TOKEN = environ.get('BOT_TOKEN', "5831896442:AAFpMYtkbophBD2YeRo08P4CKeZyCmOuoQE")
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 150))
 USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
 
-PICS = (environ.get('PICS', 'https://graph.org/file/6092ad90bdc8b12dbf4b2.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/6092ad90bdc8b12dbf4b2.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/030bd90333f090dafe064.jpg")
-SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/6092ad90bdc8b12dbf4b2.jpg")
+PICS = (environ.get('PICS', 'https://graph.org/file/54c916b164355510097fa.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/54c916b164355510097fa.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/54c916b164355510097fa.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/54c916b164355510097fa.jpg")
 
-STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "Flase")), False)
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1991522624').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001867538832').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001971879597').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001752626076')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002077157127')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -45,10 +45,10 @@ NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'False')), False)
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mogo007:mogo007@cluster0.7o1vfny.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "MINATO")
+DATABASE_NAME = environ.get('DATABASE_NAME', "SHIV")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
-premium = environ.get('PREMIUM_LOGS', '-1002114337101')
+premium = environ.get('PREMIUM_LOGS', '-1001844691460')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 
 IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'goo.aslink.in')
@@ -56,23 +56,23 @@ IMPORT_JK_API = environ.get('IMPORT_JK_API', 'c5ecbd7b5e088fd1c8b755f331d055c27d
 SHORT_MODE = is_enabled((environ.get("SHORT_MODE","False")), False)
 
 # Others
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Niko_Roben")
-VERIFY2_URL = environ.get('VERIFY2_URL', "goo.aslink.in")
-VERIFY2_API = environ.get('VERIFY2_API', "c5ecbd7b5e088fd1c8b755f331d055c27d3b2fa7")
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'goo.aslink.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'c5ecbd7b5e088fd1c8b755f331d055c27d3b2fa7')
+VERIFY2_URL = environ.get('VERIFY2_URL', "krishnalink.com")
+VERIFY2_API = environ.get('VERIFY2_API', "d9f1f83a2393abb3e8774ab0d7a0465a578f59a9")
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'krishnalink.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'd9f1f83a2393abb3e8774ab0d7a0465a578f59a9')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001966591245').split()]
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/ThappyHour')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/The_Happy_Hours')
-MSG_ALRT = environ.get('MSG_ALRT', 'The Happy Hour')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002139657732))
-LAZY_GROUP_LOGS = int(environ.get('LAZY_GROUP_LOGS', -1002049370768))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Happy_Hour_Friends')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/REQUESTING_MOVIES_SERIES_GROUPS')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/BoB_Files1')
+MSG_ALRT = environ.get('MSG_ALRT', 'BOB Files')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001844691460))
+LAZY_GROUP_LOGS = int(environ.get('LAZY_GROUP_LOGS', -1001844691460))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'REQUESTING_MOVIES_SERIES_GROUPS')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
@@ -91,7 +91,7 @@ PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
 # Streaming
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1001992201683")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1001844691460")
 if len(BIN_CHANNEL) == 0:
     logging.error('BIN_CHANNEL is missing, exiting now')
     exit()
