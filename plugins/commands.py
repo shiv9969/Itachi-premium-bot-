@@ -250,7 +250,7 @@ async def start(client, message):
                 ]]
                 await verify_user(client, userid, token)
                 await message.reply_text(
-                    text=f"<b>सफलतापूर्वक वेरिफाई हो गए हैं ! ✅\n\nअब आप 2 Days अनलिमिटेड मूवी ले सकते है।</b>",
+                    text=f"<b>सफलतापूर्वक वेरिफाई हो गए हैं ! ✅\n\nअब आप अनलिमिटेड मूवी ले सकते है।</b>",
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -307,7 +307,11 @@ async def start(client, message):
             InlineKeyboardButton("⛥ ʀᴇᴍᴏᴠᴇ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ⛥", url="https://t.me/Bullmovieess_autofilter_bot?start=TheHappyHour")
           ]]
                 await message.reply_text(
-                    text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन \nजरूरी हे !\n\nJust 10 second Bro 🥲\n\nAfter Get Unlimited Movies...✅</b>",
+                    text="<b>Just Verify One Time And Get Movies For next 12hr without any verification
+
+बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
+
+Click The Button Below To Check How to Verify ✅</b>",
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -363,7 +367,11 @@ async def start(client, message):
             InlineKeyboardButton("⛥ ʀᴇᴍᴏᴠᴇ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ⛥", url="https://t.me/Bullmovieess_autofilter_bot?start=TheHappyHour")
           ]]
         await message.reply_text(
-            text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन \nजरूरी हे !\n\nJust 10 second Bro 🥲\n\nAfter Get Unlimited Movies...✅</b>",
+            text="<b>Just Verify One Time And Get Movies For next 12hr without any verification
+
+बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
+
+Click The Button Below To Check How to Verify ✅</b>",
             protect_content=True if PROTECT_CONTENT else False,
             reply_markup=InlineKeyboardMarkup(btn)
         )
