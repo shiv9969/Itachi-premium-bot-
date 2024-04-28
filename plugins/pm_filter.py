@@ -977,11 +977,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
           ]]
                         await client.send_message(
                             chat_id=query.from_user.id,
-                            text="<b>Just Verify One Time And Get Movies For next 12hr without any verification
-
-बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
-
-Click The Button Below To Check How to Verify ✅</b>",
+                            text="<b>Just Verify One Time And Get Movies For next 12hr without any verification\n\nबस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें\n\nClick The Button Below To Check How to Verify ✅</b>",
                             protect_content=True if ident == 'checksubp' else False,
                             disable_web_page_preview=True,
                             parse_mode=enums.ParseMode.HTML,
@@ -1028,11 +1024,7 @@ Click The Button Below To Check How to Verify ✅</b>",
             elif is_over == 'jeetu':
                 return await query.answer("आपको मूवी पर्सनलचैट में भेजा है...✅\n\nFile Send Successfully ✅", show_alert=True)
             elif is_over == 'verify':
-                return await query.answer("Just Verify One Time And Get Movies For next 12hr without any verification
-
-बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
-
-Click The Button Below To Check How to Verify ✅", show_alert=True)
+                return await query.answer("Just Verify One Time And Get Movies For next 12hr without any verification\n\nबस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें\n\nClick The Button Below To Check How to Verify ✅", show_alert=True)
             else:
                 return await query.answer(f"Eʀʀᴏʀ: {is_over}", show_alert=True)
         files_ = await get_file_details(file_id)
@@ -1062,11 +1054,7 @@ Click The Button Below To Check How to Verify ✅", show_alert=True)
           ]]
             await client.send_message(
                 chat_id=query.from_user.id,
-                text="<b>Just Verify One Time And Get Movies For next 12hr without any verification
-
-बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
-
-Click The Button Below To Check How to Verify ✅</b>",
+                text="<b>Just Verify One Time And Get Movies For next 12hr without any verification\n\nबस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें\n\nClick The Button Below To Check How to Verify ✅</b>",
                 protect_content=True if ident == 'checksubp' else False,
                 disable_web_page_preview=True,
                 parse_mode=enums.ParseMode.HTML,
