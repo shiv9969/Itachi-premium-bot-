@@ -53,7 +53,7 @@ async def stream_download(bot, query):
     download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
     non_online = await import_site(online)
     non_download = await import_site(download)
-    if not await db.has_premium_access(query.from_user.id) and STREAM_MODE == True:
+    if not await db.has_premium_access(query.from_user.id) and STREAM_MODE == False:
         await log_msg.reply_text(
             text=f"tg://openmessage?user_id={user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
             disable_web_page_preview=True,
