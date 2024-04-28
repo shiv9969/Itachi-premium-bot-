@@ -46,7 +46,7 @@ async def myplan(client, message):
         minutes, seconds = divmod(remainder, 60)
 
         time_left_str = f"{days} days, {hours} hours, {minutes} minutes"
-        await message.reply_text(f"<blockquote><b>⚡ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀɴ ᴅᴇᴛᴀɪʟꜱ ⚡\n\nᴛɪᴍᴇ ʟᴇꜰᴛ - {time_left_str}\nᴇxᴘɪʀᴇ ᴛɪᴍᴇ - {expiry_str_in_ist}</b></blockquote>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Uᴘɢʀᴀᴅᴇ", url="https://t.me/TheHappyHourBot?start=TheHappyHour"), InlineKeyboardButton("Cʟᴏsᴇ ❌", callback_data="close_data")]])) 
+        await message.reply_text(f"<blockquote><b>⚡ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀɴ ᴅᴇᴛᴀɪʟꜱ ⚡\n\nᴛɪᴍᴇ ʟᴇꜰᴛ - {time_left_str}\nᴇxᴘɪʀᴇ ᴛɪᴍᴇ - {expiry_str_in_ist}</b></blockquote>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Uᴘɢʀᴀᴅᴇ", url="https://t.me/Bullmovieess_autofilter_bot?start=TheHappyHour"), InlineKeyboardButton("Cʟᴏsᴇ ❌", callback_data="close_data")]])) 
     else:
         await message.reply_text(f"<b><blockquote>आपने कोई प्रीमियम प्लान Buy नई किया...😒\n\nप्रीमियम प्लान Buy करने के \nलिऐ /premium पर क्लिक करें ‼️</blockquote></b>")
 
@@ -94,22 +94,20 @@ async def allplans(bot, message):
 @Client.on_message(filters.private & filters.command("premium"))
 async def allplan(bot, message):
     btn = [[
-            InlineKeyboardButton('📸 sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ 📸', url="https://t.me/Master_Jiraya_Bot")
+            InlineKeyboardButton('📸 sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ 📸', url="https://t.me/ASSAULTER_SHIV")
         ],[
             InlineKeyboardButton('☘️ ꜰᴜᴛᴜʀᴇ ☘️', url="https://graph.org/The-Happy-Hour-12-22-2"),
             InlineKeyboardButton('cʟᴏꜱᴇ', callback_data='close_data')
         ]]
     await message.reply_photo(
-        photo="https://telegra.ph/file/71be8b45fd8da04a6531c.jpg",
+        photo="https://graph.org/file/792201104b4f148346696.jpg",
         caption="""<blockquote><b>
         <a href='https://graph.org/The-Happy-Hour-12-22-2'>💥 ᴘʀᴇᴍɪᴜᴍ ᴘʀɪᴄᴇ 💥
         
-1 Wᴇᴇᴋ = [50 + 0] Rs
-1 Mᴏɴᴛʜ = [50 + 10] Rs
-2 Mᴏɴᴛʜ = [50 + 30] Rs
-3 Mᴏɴᴛʜ = [50 + 50] Rs
-6 Mᴏɴᴛʜ = [50 + 100] Rs
-1 Yᴇᴀʀ = [50 + 150] Rs
+1 Wᴇᴇᴋ = 20 Rs
+1 Mᴏɴᴛʜ = 30 Rs
+2 Mᴏɴᴛʜ = 50 Rs
+3 Mᴏɴᴛʜ = 100 Rs
 
 ⚡ᴄʜᴀᴄᴋ ᴘʀᴇᴍɪᴜᴍ ꜰᴜᴛᴜʀᴇꜱ
 ㅤㅤㅤㅤㅤ</a></b></blockquote>""",
