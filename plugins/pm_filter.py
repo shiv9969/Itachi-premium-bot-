@@ -977,7 +977,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
           ]]
                         await client.send_message(
                             chat_id=query.from_user.id,
-                            text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन \nजरूरी हे !\n\nJust 10 second Bro 🥲\n\nAfter Get Unlimited Movies...✅</b>",
+                            text="<b>Just Verify One Time And Get Movies For next 12hr without any verification
+
+बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
+
+Click The Button Below To Check How to Verify ✅</b>",
                             protect_content=True if ident == 'checksubp' else False,
                             disable_web_page_preview=True,
                             parse_mode=enums.ParseMode.HTML,
@@ -1024,7 +1028,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             elif is_over == 'jeetu':
                 return await query.answer("आपको मूवी पर्सनलचैट में भेजा है...✅\n\nFile Send Successfully ✅", show_alert=True)
             elif is_over == 'verify':
-                return await query.answer("Hᴇʏ, Yᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ. Yᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴠᴇʀɪғʏ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
+                return await query.answer("Just Verify One Time And Get Movies For next 12hr without any verification
+
+बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
+
+Click The Button Below To Check How to Verify ✅", show_alert=True)
             else:
                 return await query.answer(f"Eʀʀᴏʀ: {is_over}", show_alert=True)
         files_ = await get_file_details(file_id)
@@ -1054,7 +1062,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
           ]]
             await client.send_message(
                 chat_id=query.from_user.id,
-                text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन \nजरूरी हे !\n\nJust 10 second Bro 🥲\n\nAfter Get Unlimited Movies...✅</b>",
+                text="<b>Just Verify One Time And Get Movies For next 12hr without any verification
+
+बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
+
+Click The Button Below To Check How to Verify ✅</b>",
                 protect_content=True if ident == 'checksubp' else False,
                 disable_web_page_preview=True,
                 parse_mode=enums.ParseMode.HTML,
