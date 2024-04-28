@@ -307,11 +307,7 @@ async def start(client, message):
             InlineKeyboardButton("⛥ ʀᴇᴍᴏᴠᴇ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ⛥", url="https://t.me/Bullmovieess_autofilter_bot?start=TheHappyHour")
           ]]
                 await message.reply_text(
-                    text="<b>Just Verify One Time And Get Movies For next 12hr without any verification
-
-बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
-
-Click The Button Below To Check How to Verify ✅</b>",
+                    text="<b>Just Verify One Time And Get Movies For next 12hr without any verification\n\nबस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें\n\nClick The Button Below To Check How to Verify ✅</b>",
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -367,11 +363,7 @@ Click The Button Below To Check How to Verify ✅</b>",
             InlineKeyboardButton("⛥ ʀᴇᴍᴏᴠᴇ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ⛥", url="https://t.me/Bullmovieess_autofilter_bot?start=TheHappyHour")
           ]]
         await message.reply_text(
-            text="<b>Just Verify One Time And Get Movies For next 12hr without any verification
-
-बस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें
-
-Click The Button Below To Check How to Verify ✅</b>",
+            text="<b>Just Verify One Time And Get Movies For next 12hr without any verification\n\nबस एक बार verify करें और बिना किसी verification के अगले 12 घंटों के लिए फिल्में प्राप्त करें\n\nClick The Button Below To Check How to Verify ✅</b>",
             protect_content=True if PROTECT_CONTENT else False,
             reply_markup=InlineKeyboardMarkup(btn)
         )
