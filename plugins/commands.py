@@ -285,9 +285,9 @@ async def start(client, message):
         <a href='https://graph.org/The-Happy-Hour-12-22-2'>💥 ᴘʀᴇᴍɪᴜᴍ ᴘʀɪᴄᴇ 💥
         
 1 Wᴇᴇᴋ = 20 Rs
-1 Mᴏɴᴛʜ = 30 Rs
-2 Mᴏɴᴛʜ = 50 Rs
-3 Mᴏɴᴛʜ = 100 Rs
+1 Mᴏɴᴛʜ = 50 Rs
+2 Mᴏɴᴛʜ = 90 Rs
+3 Mᴏɴᴛʜ = 120 Rs
 
 ⚡ᴄʜᴀᴄᴋ ᴘʀᴇᴍɪᴜᴍ ꜰᴜᴛᴜʀᴇꜱ⚡
 ㅤㅤㅤㅤㅤ</a></b></blockquote>""",
