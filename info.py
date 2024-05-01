@@ -51,8 +51,8 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 premium = environ.get('PREMIUM_LOGS', '-1001844691460')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 
-IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'goo.aslink.in')
-IMPORT_JK_API = environ.get('IMPORT_JK_API', 'c5ecbd7b5e088fd1c8b755f331d055c27d3b2fa7')
+IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'Zxlink.in')
+IMPORT_JK_API = environ.get('IMPORT_JK_API', '72fe2cd23d0e62ef0ab8efa493a78dff1f311cc2')
 SHORT_MODE = is_enabled((environ.get("SHORT_MODE","False")), False)
 
 # Others
