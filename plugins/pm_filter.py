@@ -60,7 +60,7 @@ async def stream_download(bot, query):
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
                                             InlineKeyboardButton('🖥️ ꜱᴛʀᴇᴇᴍ 🖥️', url=non_online)]])
         )
-        await query.answer("ꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ....🌿\nꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ....🌿\n\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺", show_alert=True)
+        await query.answer("ꜱᴛʀᴇᴇᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ....🌿\n\nᴍᴜꜱᴛ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ....🌺", show_alert=True)
         await query.message.reply_text(
             text=f"ʏᴏᴜʀ ꜱᴛʀᴇᴇᴍ & ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ɪꜱ ɢᴇɴᴇʀᴀᴛᴇᴅ....✅",
             disable_web_page_preview=True,
