@@ -704,7 +704,7 @@ async def send_all(bot, userid, files, ident):
         btn = [[
                 InlineKeyboardButton("❆ Jᴏɪɴ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link)
             ],[
-                InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"{pre}#send_all")
+                InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={pre}_send_all")
             ]]
         await bot.send_message(
             chat_id=userid,
