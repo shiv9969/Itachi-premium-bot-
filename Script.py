@@ -1,6 +1,6 @@
 class script(object):
     START_TXT = """<b>
-Mʏ Nᴀᴍᴇ Is #Minato, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs</b>"""
+Mʏ Nᴀᴍᴇ Is #Itachi, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs</b>"""
 
     HELP_TXT = """<b><blockquote>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b></blockquote>"""
@@ -164,13 +164,13 @@ Sᴇᴀʀᴄʜ Wᴇʙ Sᴇʀɪᴇs Iɴ ᴛʜɪs Fᴏʀᴍᴀᴛᴇ :
 
     TOP_ALRT_MSG = """Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Dᴀᴛᴀʙᴀsᴇ..."""
 
-    MELCOW_ENG = """<blockquote><b>Hᴇʟʟᴏ Aɴᴅ Wᴇʟᴄᴏᴍᴇ Tᴏ Gʀᴏᴜᴘ ❤️</b></blockquote>"""
+    MELCOW_ENG = """<blockquote><b>Hᴇʟʟᴏ Aɴᴅ Wᴇʟᴄᴏᴍᴇ Tᴏ BoB's Community ❤️</b></blockquote>"""
 
     OWNER_INFO = """
 <b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
     
-• ꜰᴜʟʟ ɴᴀᴍᴇ : Master Jiraya
-• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/Master_Jiraya_Bot'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
+• ꜰᴜʟʟ ɴᴀᴍᴇ : Assaulter shiv 
+• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/Assaulter_shiv'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
 
     REQINFO = """
 ⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠
@@ -249,7 +249,7 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 1 Wᴇᴇᴋ = 20 Rs
 1 Mᴏɴᴛʜ = 50 Rs
 2 Mᴏɴᴛʜ = 90 Rs
-3 Mᴏɴᴛʜ = 120 Rs
+3 Mᴏɴᴛʜ = 140 Rs
 
 ⚡ᴄʜᴀᴄᴋ ᴘʀᴇᴍɪᴜᴍ ꜰᴜᴛᴜʀᴇꜱ⚡</a></b></blockquote>"""
 
@@ -291,7 +291,7 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 
 ━━━━━━━━━━━━━━━━━━━
 
-ㅤ3 Mᴏɴᴛʜ = 120 Rs
+ㅤ3 Mᴏɴᴛʜ = 140 Rs
 
 ━━━━━━━━━━━━━━━━━━━
 
