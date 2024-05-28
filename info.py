@@ -57,7 +57,7 @@ IMPORT_JK_API = environ.get('IMPORT_JK_API', '72fe2cd23d0e62ef0ab8efa493a78dff1f
 SHORT_MODE = is_enabled((environ.get("SHORT_MODE","False")), False)
 
 # Others
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/kaisekhole/8")
 VERIFY2_URL = environ.get('VERIFY2_URL', "short4cash.com")
 VERIFY2_API = environ.get('VERIFY2_API', "90e39526f9d6ed46a094f56069354b223bd8b763")
