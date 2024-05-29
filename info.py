@@ -57,12 +57,12 @@ IMPORT_JK_API = environ.get('IMPORT_JK_API', '72fe2cd23d0e62ef0ab8efa493a78dff1f
 SHORT_MODE = is_enabled((environ.get("SHORT_MODE","False")), False)
 
 # Others
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/kaisekhole/8")
-VERIFY2_URL = environ.get('VERIFY2_URL', "short4cash.com")
-VERIFY2_API = environ.get('VERIFY2_API', "90e39526f9d6ed46a094f56069354b223bd8b763")
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'short4cash.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '90e39526f9d6ed46a094f56069354b223bd8b763')
+VERIFY2_URL = environ.get('VERIFY2_URL', "get2short.com")
+VERIFY2_API = environ.get('VERIFY2_API', "065bdc3675239406d3eccd0672542fee9a89f863")
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'get2short.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '065bdc3675239406d3eccd0672542fee9a89f863')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "7")
