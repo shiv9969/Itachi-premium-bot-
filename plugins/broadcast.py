@@ -66,7 +66,7 @@ async def grp_brodcst(bot, message):
             elif sh == "Error":
                 failed += 1
         done += 1
-        await asyncio.sleep(2)
+        #await asyncio.sleep(2)
         if not done % 20:
             await sts.edit(f"Broadcast in progress:\n\nTotal Chats {total_chats}\nCompleted: {done} / {total_chats}\nSuccess: {success}\nFailed: {failed}")    
     time_taken = datetime.timedelta(seconds=int(time.time()-start_time))
