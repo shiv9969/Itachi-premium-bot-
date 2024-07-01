@@ -282,12 +282,12 @@ async def start(client, message):
         await message.reply_photo(
         photo="https://graph.org/file/792201104b4f148346696.jpg",
         caption="""<blockquote><b>
-        <a href='https://graph.org/The-Happy-Hour-12-22-2'>💥 ᴘʀᴇᴍɪᴜᴍ ᴘʀɪᴄᴇ 💥
+        <a href='https://te.legra.ph/ᶦτ𝒛-𝕊𝕊𝖚𝖑𝖙𝖊𝖗-𝖍𝖎𝖛-ꭗ𓆩𓆪-07-01-3'>💥 ᴘʀᴇᴍɪᴜᴍ ᴘʀɪᴄᴇ 💥
         
-1 Wᴇᴇᴋ = 20 Rs
+1 Wᴇᴇᴋ = 30 Rs
 1 Mᴏɴᴛʜ = 50 Rs
 2 Mᴏɴᴛʜ = 90 Rs
-3 Mᴏɴᴛʜ = 120 Rs
+3 Mᴏɴᴛʜ = 140 Rs
 
 ⚡ᴄʜᴀᴄᴋ ᴘʀᴇᴍɪᴜᴍ ꜰᴜᴛᴜʀᴇꜱ⚡
 ㅤㅤㅤㅤㅤ</a></b></blockquote>""",
