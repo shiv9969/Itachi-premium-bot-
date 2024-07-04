@@ -1,12 +1,8 @@
-if [ -z $UPSTREAM_REPO ]
-then
-  echo "Cloning main Repository"
-  git clone https://github.com/shiv9969/Itachi-premium-bot- /New-Premium-Bot
-else
-  echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /New-Premium-Bot
-fi
-cd /New-Premium-Bot
-pip3 install -U -r requirements.txt
+FROM python:3.10.8-slim-buster
+COPY requirements.txt .
+RUN apt update -y && apt install git -y
+RUN pip3 install -U -r requirements.txt
+COPY . .
+CMD ["/bin/bash", "/start.sh"]
 echo "Starting DQ-The-File-Donor...."
 python3 bot.py
